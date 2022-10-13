@@ -28,6 +28,9 @@ describe('sayHello', function(){
     it('should return "Hello, Alex!" when "Alex" is passed in function', function() {
         expect(sayHello("Alex")).toBe('Hello, Alex!');
     })
+    it('should return "Hello, Pat!" when "Pat" is passed in function', function() {
+        expect(sayHello("Pat")).toBe("Hello, Pat!");
+    })
     // it('should never return "undefined" when called', function () {
     //     expect(sayHello()).not.toBe(undefined);
     // });
