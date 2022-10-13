@@ -4,8 +4,16 @@ function helloWorld() {
 }
 
 function sayHello(input) {
-    return "Hello, " + input + "!";
-    // if (input === 'Alex') {
+    if (input === undefined) {
+        return "Hello, World!";
+    } else if (input === true) {
+        return "Hello, World!";
+    } else if (input === false) {
+        return "Hello, World!";
+    } else return "Hello, " + input + "!";
+    }
+
+// if (input === 'Alex') {
     //     return "Hello, Alex!";
     // } else if (input === 'Jane'){
     //     return "Hello, Jane!";
@@ -14,6 +22,7 @@ function sayHello(input) {
     // } else {
     //     return ''
     // }
-}
+//Note: Pre-refactored code
+
 
 

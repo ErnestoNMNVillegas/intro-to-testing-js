@@ -31,6 +31,15 @@ describe('sayHello', function(){
     it('should return "Hello, Pat!" when "Pat" is passed in function', function() {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     })
+    it('should return "Hello, World!" when no argument entered', function(){
+        expect(sayHello()).toBe("Hello, World!");
+    })
+    it('should return "Hello, World!" if true is passed in function', function() {
+        expect(sayHello(true)).toBe("Hello, World!");
+    })
+    it('should return "Hello, World!" if false is passed in function', function() {
+        expect(sayHello(false)).toBe("Hello, World!")
+    })
     // it('should never return "undefined" when called', function () {
     //     expect(sayHello()).not.toBe(undefined);
     // });
