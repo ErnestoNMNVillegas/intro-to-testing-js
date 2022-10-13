@@ -3,6 +3,7 @@ function helloWorld() {
     return "Hello, World!";
 }
 
+// sayHello function
 function sayHello(input) {
     if (input === undefined) {
         return "Hello, World!";
@@ -24,6 +25,7 @@ function sayHello(input) {
     // }
 //Note: Pre-refactored code
 
+// isFive function
 function isFive(input){
     let normInput = parseInt(input);
     if (normInput === 5) {
@@ -33,5 +35,9 @@ function isFive(input){
     }
 }
 
-
-
+// isEven function
+function isEven(input){
+    if (input % 2 === 0){
+        return true;
+    } else return false;
+}
