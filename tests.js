@@ -22,10 +22,12 @@ describe('sayHello', function(){
     it('should return a string when called', function() {
         expect(typeof sayHello()).toBe('string');
     });
-    it('should return the string "Hello, Jane" name entered!" when executed', function() {
+    it('should return the string "Hello, Jane" when "Jane" is passed in function', function() {
         expect(sayHello('Jane')).toBe('Hello, Jane!');
     });
-    it('shou')
+    it('should return "Hello, Alex!" when "Alex" is passed in function', function() {
+        expect(sayHello("Alex")).toBe('Hello, Alex!');
+    })
     // it('should never return "undefined" when called', function () {
     //     expect(sayHello()).not.toBe(undefined);
     // });
