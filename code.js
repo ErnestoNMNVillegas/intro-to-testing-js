@@ -24,5 +24,14 @@ function sayHello(input) {
     // }
 //Note: Pre-refactored code
 
+function isFive(input){
+    let normInput = parseInt(input);
+    if (normInput === 5) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 

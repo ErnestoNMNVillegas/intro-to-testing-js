@@ -14,7 +14,7 @@ describe('helloWorld', function() {
     });
 });
 
-//Exercise 1, 2
+// Unit tests for sayHello function
 describe('sayHello', function(){
     it('should be a defined function', function() {
         expect(typeof sayHello).toBe('function');
@@ -43,4 +43,17 @@ describe('sayHello', function(){
     // it('should never return "undefined" when called', function () {
     //     expect(sayHello()).not.toBe(undefined);
     // });
+});
+
+// Unit test for isFive function.
+describe('isFive', function() {
+    it('should be a defined function', function(){
+        expect(typeof isFive).toBe('function');
+    })
+    it('should return a Boolean when called', function(){
+        expect(typeof isFive()).toBe('boolean');
+    })
+    it('it should return true if passed "5"', function (){
+        expect(isFive('5')).toBe(true)
+    })
 });
