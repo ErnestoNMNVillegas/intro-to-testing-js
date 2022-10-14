@@ -104,5 +104,32 @@ describe('isVowel', function () {
     it('should return a Boolean when called', function () {
         expect(typeof isVowel()).toBe('boolean');
     })
+    it('should return true when executed with "a"', function () {
+        expect(isVowel('a')).toBe(true);
+    })
+
+    // it('should return', function () {
+    //     expect(typeof isVowel()).toBe('boolean');
+    // })
+    // it('should ', function () {
+    //     expect(typeof isVowel).toBe('function');
+    // })
+    // it('should return ', function () {
+    //     expect(typeof isVowel()).toBe('boolean');
+    // })
+    // it('should ', function () {
+    //     expect(typeof isVowel).toBe('function');
+    // })
+    // it('should return ', function () {
+    //     expect(typeof isVowel()).toBe('boolean');
+    // })
+    //
+    // isVowel("A") returns true
+    // isVowel("y") returns false
+    // isVowel(4) returns false
+    // isVowel(true) or isVowel(false) both return false
+    // isVowel("banana") returns false
+    // isVowel() returns false
+
 
 })

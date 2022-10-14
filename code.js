@@ -47,7 +47,7 @@ function isEven(input){
 // isVowel function
 function isVowel (input){
         let vowel = ['a'|'e'|'i'|'o'|'u']
-        if (input === vowel){
+        if ([input] === vowel){
             return true;
         } else {
             return false;
