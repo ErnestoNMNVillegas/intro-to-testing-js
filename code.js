@@ -39,5 +39,18 @@ function isFive(input){
 function isEven(input){
     if (input % 2 === 0){
         return true;
-    } else return false;
+    } else {
+        return false;
+    }
 }
+
+// isVowel function
+function isVowel (input){
+        let vowel = ['a'|'e'|'i'|'o'|'u']
+        if (input === vowel){
+            return true;
+        } else {
+            return false;
+        }
+}
+

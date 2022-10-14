@@ -87,9 +87,22 @@ describe('isEven', function (){
     it ('should returns false when called with true', function (){
         expect(isEven(true)).toBe(false);
     })
-    // it ('should returns false when called with false', function (){
-    //     expect(isEven(false)).toBe(false);
-    // })
+    it ('should returns false when called with false', function (){
+        expect(isEven(false)).toBe(false);
+    })
     //Note: I could figure out the fix for this.
+    it ('should returns false when called without argument', function (){
+        expect(isEven()).toBe(false);
+    })
+})
+
+// Unit test for isVowel function
+describe('isVowel', function () {
+    it('should be a defined function', function () {
+        expect(typeof isVowel).toBe('function');
+    })
+    it('should return a Boolean when called', function () {
+        expect(typeof isVowel()).toBe('boolean');
+    })
 
 })
