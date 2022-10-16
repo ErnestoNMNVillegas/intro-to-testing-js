@@ -102,34 +102,53 @@ describe('isVowel', function () {
         expect(typeof isVowel).toBe('function');
     })
     it('should return a Boolean when called', function () {
-        expect(typeof isVowel()).toBe('boolean');
+        expect(typeof isVowel('')).toBe('boolean');
     })
     it('should return true when executed with "a"', function () {
         expect(isVowel('a')).toBe(true);
     })
+    it('should return true when executed with "A"', function () {
+        expect(isVowel('A')).toBe(true);
+    })
+    it('should return true when executed with "y"', function () {
+        expect(isVowel('y')).toBe(true);
+    })
+    it('should return true when executed with 4', function () {
+        expect(isVowel(4)).toBe(false);
+    })
+    it('should return false when executed with "false"', function () {
+        expect(isVowel(false)).toBe(false);
+    })
+    it('should return false when executed with "true"', function () {
+        expect(isVowel(true)).toBe(false);
+    })
+    it('should return false when executed with "banana"', function () {
+        expect(isVowel('banana')).toBe(false);
+    })
+    it('should return false when executed with no argument', function () {
+        expect(isVowel(undefined)).toBe(false);
+    })
+})
 
-    // it('should return', function () {
-    //     expect(typeof isVowel()).toBe('boolean');
-    // })
-    // it('should ', function () {
-    //     expect(typeof isVowel).toBe('function');
-    // })
-    // it('should return ', function () {
-    //     expect(typeof isVowel()).toBe('boolean');
-    // })
-    // it('should ', function () {
-    //     expect(typeof isVowel).toBe('function');
-    // })
-    // it('should return ', function () {
-    //     expect(typeof isVowel()).toBe('boolean');
-    // })
-    //
-    // isVowel("A") returns true
-    // isVowel("y") returns false
-    // isVowel(4) returns false
-    // isVowel(true) or isVowel(false) both return false
-    // isVowel("banana") returns false
-    // isVowel() returns false
-
-
+// add Function
+// Unit test for isAdd function
+describe('addFun', function () {
+    it('should be a defined function', function () {
+        expect(typeof addFun).toBe('function');
+    })
+    it('should return 5 when executed with 2 and 3', function () {
+        expect(addFun(2, 3)).toBe(5);
+    })
+    it('should return -12 when executed with -3 and -9', function () {
+        expect(addFun(-3, -9)).toBe(-12);
+    })
+    it('should return 11 when executed with "5" and 6', function () {
+        expect(addFun('5', 6)).toBe(11);
+    })
+    it('should return 6 when executed with "-4" and "10', function () {
+        expect(addFun('-4', '10')).toBe(6);
+    })
+    it('should return NaN when executed with "banana" and "split', function () {
+        expect(addFun('banana', 'split')).toBe(NaN);
+    })
 })

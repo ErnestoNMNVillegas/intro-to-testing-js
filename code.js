@@ -46,11 +46,27 @@ function isEven(input){
 
 // isVowel function
 function isVowel (input){
-        let vowel = ['a'|'e'|'i'|'o'|'u']
-        if ([input] === vowel){
-            return true;
-        } else {
-            return false;
-        }
+    let vowel = (/[aeiou]/gi);
+    if ([input === vowel]) {
+        return true;
+    }   else if (input === undefined) {
+        return false;
+    }   else {
+        return false;
+    }
 }
+
+// addFun function
+function addFun (x, y) {
+    let xNum = parseInt(x);
+    let yNum = parseInt(y);
+
+    if (isNaN(xNum) || isNaN(yNum)) {
+        return NaN;
+    } else {
+        return xNum + yNum;
+    }
+}
+
+
 
