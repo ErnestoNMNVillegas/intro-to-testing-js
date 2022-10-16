@@ -151,4 +151,10 @@ describe('addFun', function () {
     it('should return NaN when executed with "banana" and "split', function () {
         expect(addFun('banana', 'split')).toBe(NaN);
     })
+    it('should return NaN when executed with 2 and "apples', function () {
+        expect(addFun(2, 'apples')).toBe(NaN);
+    })
+    it('should return false when executed with no argument', function () {
+        expect(addFun(undefined)).toBe(false);
+    })
 })
