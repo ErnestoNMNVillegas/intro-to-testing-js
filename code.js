@@ -51,8 +51,10 @@ function isVowel (input) {
         return true;
     }   else if (input === undefined) {
         return false;
-    }   else {
+    }   else if (typeof input === 'boolean') {
         return false;
+    }   else {
+        return;
     }
 }
 
@@ -62,10 +64,12 @@ function addFun (x, y) {
     let yNum = parseInt(y);
 
     if (isNaN(xNum) || isNaN(yNum)) {
-        return NaN;
+        return 'NaN';
     } else if (typeof xNum === "boolean"){
         return false;
     } else if (typeof yNum === "boolean"){
+        return false;
+    } else if (xNum === undefined || yNum === undefined){
         return false;
     } else {
         return xNum + yNum;
