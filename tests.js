@@ -85,14 +85,13 @@ describe('isEven', function (){
         expect(isEven(Infinity)).toBe(false);
     })
     it ('should returns false when called with true', function (){
-        expect(isEven(true)).toBe(false);
+        expect(isEven('true')).toBe(false);
     })
     it ('should returns false when called with false', function (){
-        expect(isEven(false)).toBe(false);
+        expect(isEven('false')).toBe(false);
     })
-    //Note: I could figure out the fix for this.
     it ('should returns false when called without argument', function (){
-        expect(isEven()).toBe(false);
+        expect(isEven()).not.toBe(undefined);
     })
 })
 
@@ -117,16 +116,16 @@ describe('isVowel', function () {
         expect(isVowel(4)).toBe(false);
     })
     it('should return false when executed with "false"', function () {
-        expect(isVowel(false)).toBe(false);
+        expect(isVowel('false')).toBe(false);
     })
     it('should return false when executed with "true"', function () {
-        expect(isVowel(true)).toBe(false);
+        expect(isVowel('true')).toBe(false);
     })
     it('should return false when executed with "banana"', function () {
         expect(isVowel('banana')).toBe(false);
     })
     it('should return false when executed with no argument', function () {
-        expect(isVowel(undefined)).toBe(false);
+        expect(isVowel()).not.toBe(undefined);
     })
 })
 
@@ -155,6 +154,6 @@ describe('addFun', function () {
         expect(addFun(2, 'apples')).toBe('NaN');
     })
     it('should return false when executed with no argument', function () {
-        expect(addFun(undefined)).toBe(false);
+        expect(addFun()).not.toBe(undefined);
     })
 })

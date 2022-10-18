@@ -39,7 +39,15 @@ function isFive(input){
 function isEven(input){
     if (input % 2 === 0){
         return true;
-    } else {
+    } else if (input % 2 === 1){
+        return false;
+    } else if (input === undefined){
+        return false;
+    } else if (input === 'false' || input === 'true'){
+        return false;
+    } else if (isNaN(input)){
+        return false;
+    } else if (input === Infinity){
         return false;
     }
 }
@@ -49,12 +57,10 @@ function isVowel (input) {
     let vowel = (/[aeiou]/gi);
     if ([input === vowel]) {
         return true;
+    }   else if (input === 'false' || input === 'true') {
+        return false;
     }   else if (input === undefined) {
         return false;
-    }   else if (typeof input === 'boolean') {
-        return false;
-    }   else {
-        return;
     }
 }
 
