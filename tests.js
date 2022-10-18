@@ -153,6 +153,12 @@ describe('addFun', function () {
     it('should return NaN when executed with 2 and "apples', function () {
         expect(addFun(2, 'apples')).toBe('NaN');
     })
+    it ('should returns false when called with true', function (){
+        expect(addFun('true')).toBe(false);
+    })
+    it ('should returns false when called with false', function (){
+        expect(addFun('false')).toBe(false);
+    })
     it('should return false when executed with no argument', function () {
         expect(addFun()).not.toBe(undefined);
     })

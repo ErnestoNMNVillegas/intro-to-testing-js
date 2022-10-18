@@ -66,14 +66,12 @@ function isVowel (input) {
 
 // addFun function
 function addFun (x, y) {
-    let xNum = parseInt(x);
-    let yNum = parseInt(y);
+    let xNum = Number(x);
+    let yNum = Number(y);
 
     if (isNaN(xNum) || isNaN(yNum)) {
         return 'NaN';
-    } else if (typeof xNum === "boolean"){
-        return false;
-    } else if (typeof yNum === "boolean"){
+    } else if (xNum === 'true' || yNum === "true"){
         return false;
     } else if (xNum === undefined || yNum === undefined){
         return false;
